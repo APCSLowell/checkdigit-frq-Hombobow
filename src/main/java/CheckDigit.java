@@ -13,7 +13,7 @@ public class CheckDigit
      int i = 7;
      int j = 1;
      while (i > 7 - number) {
-       sum += getDigit(num, j) * i;
+       sum += getDigit(num, num - j + 1) * i;
        i--;
        j++;
      }
@@ -29,7 +29,7 @@ public class CheckDigit
    public static boolean isValid(int numWithCheckDigit)    
    {      
      /* to be implemented in part (b) */
-     return (getCheck(numWithCheckDigit / 10) == numWithCheckDigit & 10);
+     return getCheck(numWithCheckDigit / 10) == numWithCheckDigit % 10;
    }    
    
    /** Returns the number of digits in num. */    
