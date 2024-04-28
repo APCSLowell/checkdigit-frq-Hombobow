@@ -13,7 +13,7 @@ public class CheckDigit
      int i = 7;
      int j = 1;
      while (i > 7 - number) {
-       sum += getDigit(num, num - j + 1) * i;
+       sum += getDigit(num, j + 1) * i;
        i--;
        j++;
      }
